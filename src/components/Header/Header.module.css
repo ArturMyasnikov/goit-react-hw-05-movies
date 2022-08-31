@@ -1,0 +1,44 @@
+.header {
+  position: relative;
+
+  padding: 20px 30px 20px 30px;
+
+  box-shadow: -10px -9px 18px 14px rgb(0 0 0 / 20%);
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  font-size: 23px;
+  color: black;
+}
+
+.link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.activeLink {
+  composes: link;
+
+  color: orange;
+  border-bottom: 1px solid black;
+}
+
+.btn {
+  height: 20px;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 4px;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 6px;
+}
+
+.btn:hover {
+  background-color: orange;
+  cursor: pointer;
+}
