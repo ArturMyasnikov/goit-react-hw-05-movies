@@ -7,6 +7,7 @@ const TrendingFilmsSection = lazy(() =>
 const MoviesSection = lazy(() => import('./Movies/MoviesSection'));
 const AboutFilmCard = lazy(() => import('./views/AboutFilmCard'));
 const Layout = lazy(() => import('./views/Layout'));
+const PageNotFound = lazy(() => import('components/PageNotFound/PageNotFound'));
 
 export const App = () => {
   return (
@@ -18,10 +19,7 @@ export const App = () => {
               <Route index element={<TrendingFilmsSection />} />
               <Route path="/movies/" element={<MoviesSection />} />
               <Route path="/movies/:filmById/*" element={<AboutFilmCard />} />
-              <Route
-                path="*"
-                element={<div className="wrongUrl">WRONG URL!</div>}
-              />
+              <Route path="*" element={<PageNotFound />} />
             </Route>
           </Routes>
         </Suspense>
