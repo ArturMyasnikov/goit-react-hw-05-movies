@@ -7,12 +7,12 @@ const TrendingFilmsSection = lazy(() =>
 const MoviesSection = lazy(() => import('./Movies/MoviesSection'));
 const AboutFilmCard = lazy(() => import('./views/AboutFilmCard'));
 const Layout = lazy(() => import('./views/Layout'));
-const PageNotFound = lazy(() => import('components/PageNotFound/PageNotFound'));
+const PageNotFound = lazy(() => import('./PageNotFound/PageNotFound'));
 
 export const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="goit-react-hw-05-movies/">
         <Suspense fallback={<h1 style={{ textAlign: 'center' }}>Загрузка</h1>}>
           <Routes>
             <Route path="/" element={<Layout />}>
