@@ -19,8 +19,9 @@ export const App = () => {
               <Route index element={<TrendingFilmsSection />} />
               <Route path="/movies/" element={<MoviesSection />} />
               <Route path="/movies/:filmById/*" element={<AboutFilmCard />} />
-              <Route path="*" element={<PageNotFound />} />
+              {/* <Route path="*" element={<PageNotFound />} /> */}
             </Route>
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
