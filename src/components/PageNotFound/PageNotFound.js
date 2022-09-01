@@ -3,8 +3,9 @@ import style from '../Header/Header.module.css';
 
 const PageNotFound = () => {
   const navigate = useNavigate();
+
   const goBack = () => {
-    navigate(-1);
+    navigate('/');
   };
 
   return (
